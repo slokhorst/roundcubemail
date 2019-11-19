@@ -40,8 +40,8 @@ $config['db_dsnw'] = 'mysql://roundcube:pass@localhost/roundcubemail';
 $config['default_host'] = 'localhost';
 
 // SMTP server host (for sending mails).
-// Enter hostname with prefix tls:// to use STARTTLS, or use
-// prefix ssl:// to use the deprecated SSL over SMTP (aka SMTPS)
+// Enter hostname with prefix prefix ssl:// to use SMTPS,
+// or use prefix tls:// to use STARTTLS
 // Supported replacement variables:
 // %h - user's IMAP hostname
 // %n - hostname ($_SERVER['SERVER_NAME'])
@@ -51,9 +51,8 @@ $config['default_host'] = 'localhost';
 // For example %n = mail.domain.tld, %t = domain.tld
 $config['smtp_server'] = 'localhost';
 
-// SMTP port (default is 25; use 587 for STARTTLS or 465 for the
-// deprecated SSL over SMTP (aka SMTPS))
-$config['smtp_port'] = 587;
+// SMTP port (default is 25; use 465 for SMTPS or 587 for STARTTLS)
+$config['smtp_port'] = 465;
 
 // SMTP username (if required) if you use %u as the username Roundcube
 // will use the current username for login
